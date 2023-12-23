@@ -9,22 +9,11 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import HomeScreen from './Screens/HomeScreen';
 const Stack = createNativeStackNavigator();
 
-const linking = {
-  prefixes: ['localhost'],
-  config: {
-    screens: {
-      Home: '',
-      Profile: ':id/profile',
-      Settings: ':id/blog',
-    }
-  },
-};
-
 // Provider
 
 export default function App() {
   return (
-      <NavigationContainer linking={linking}>
+      <NavigationContainer>
         <Stack.Navigator>
           <Stack.Screen name="List and Reviews" component={HomeScreen} />
           {/* Add more screens as needed */}
